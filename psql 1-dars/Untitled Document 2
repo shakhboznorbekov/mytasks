@@ -1,0 +1,49 @@
+SELECT
+    users.name AS user_name,
+    books.name AS book_name,
+    books.price AS book_price,
+    books.publish_date AS book_date,
+    author.name AS author_name
+FROM
+    users 
+LEFT JOIN books 
+    ON users.book_id = books.id
+LEFT JOIN author 
+    on author.id=books.author_id    
+;
+
+--<<<<<<<<<<<<<<<<<<<<2-masala>>>>>>>>>>>>>
+CREATE TABLE teacher(
+    id INT NOT NULL PRIMARY KEY,
+    name VARCHAR NOT NULL
+);
+
+CREATE TABLE course (
+    id INT NOT NULL PRIMARY KEY,
+    name VARCHAR NOT NULL,
+    price DECIMAL NOT NULL,
+    duration VARCHAR NOT NULL,
+    teacher_id INT REFERENCES teacher(id)
+);
+
+CREATE TABLE student (
+    id INT NOT NULL PRIMARY KEY,
+    name VARCHAR NOT NULL,
+    phone_number INT NOT NULL,
+    age INT NOT NULL,
+    couser_id INT REFERENCES course(id)
+
+SELECT
+    student.name AS user_name,
+    teacher.name AS course_teacher,
+    course.name AS course_name,
+    course.price AS course_price,
+    course.duration AS course_duration
+FROM
+    student
+JOIN course 
+    ON student.couser_id=course.id
+JOIN teacher
+    ON teacher.id=course.teacher_id    
+;
+
