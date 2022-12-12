@@ -8,8 +8,8 @@ import (
 
 	"github.com/gin-gonic/gin"
 
-	"github.com/asadbekGo/golang_crud/models"
-	"github.com/asadbekGo/golang_crud/storage"
+	"github.com/shakhboznorbekov/mytasks/30-dars/golang_crud-master/models"
+	"github.com/shakhboznorbekov/mytasks/30-dars/golang_crud-master/storage"
 )
 
 // CreateUser godoc

@@ -5,9 +5,9 @@ import (
 
 	"github.com/gin-gonic/gin"
 
-	"github.com/asadbekGo/golang_crud/api"
-	"github.com/asadbekGo/golang_crud/config"
-	"github.com/asadbekGo/golang_crud/pkg/db"
+	"github.com/shakhboznorbekov/mytasks/30-dars/golang_crud-master/api"
+	"github.com/shakhboznorbekov/mytasks/30-dars/golang_crud-master/config"
+	"github.com/shakhboznorbekov/mytasks/30-dars/golang_crud-master/pkg/db"
 )
 
 func main() {

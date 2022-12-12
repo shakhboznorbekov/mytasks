@@ -7,8 +7,8 @@ import (
 	swaggerFiles "github.com/swaggo/files"
 	ginSwagger "github.com/swaggo/gin-swagger"
 
-	_ "github.com/asadbekGo/golang_crud/api/docs"
-	"github.com/asadbekGo/golang_crud/api/handler"
+	_ "github.com/shakhboznorbekov/mytasks/30-dars/golang_crud-master/api/docs"
+	"github.com/shakhboznorbekov/mytasks/30-dars/golang_crud-master/api/handler"
 )
 
 func SetUpApi(r *gin.Engine, db *sql.DB) {

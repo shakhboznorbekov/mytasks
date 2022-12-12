@@ -4,7 +4,7 @@ import (
 	"database/sql"
 	"fmt"
 
-	"github.com/asadbekGo/golang_crud/models"
+	"github.com/shakhboznorbekov/mytasks/30-dars/golang_crud-master/models"
 )
 
 func Create(db *sql.DB, user models.User) (string, error) {
