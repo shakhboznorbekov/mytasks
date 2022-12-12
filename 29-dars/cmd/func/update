@@ -1,0 +1,34 @@
+
+
+//updateeee
+// user1:=models.User{
+// 	"76543216erwgfgh",
+// 	"shakhboz",
+// 	"norbekov",
+// }
+
+// rowsAffected, err:=storage.Update(db,user1)
+// if err !=nil{
+// 	log.Fatalf("error while updating user:%v", err)
+// }
+// if rowsAffected==0{
+// 	log.Fatalf("not found rows")
+// }
+
+// user, err :=storage.GetById(db, user1,Id)
+// if rowsAffected==0{
+// 	log.Fatalf("not found rows")
+// }
+
+// fmt.Println(user)
+
+//deleteeeeee
+
+// func Delete(db,*sql.DB, id string) error{
+
+// 	_, err :=db.Exec("delete from users where if =$1",id)
+// 	if err !=nil{
+// 		return err
+// 	}
+// 	return nil
+// }
