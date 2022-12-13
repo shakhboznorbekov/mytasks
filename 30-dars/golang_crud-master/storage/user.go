@@ -49,6 +49,7 @@ func GetById(db *sql.DB, id string) (models.User, error) {
 			users
 		WHERE id = $1
 	`
+	fmt.Println("id:", id)
 	err := db.QueryRow(
 		query,
 		id,

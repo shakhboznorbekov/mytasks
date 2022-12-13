@@ -12,6 +12,66 @@ info:
   contact: {}
 paths:
   /user:
+    get:
+      consumes:
+      - application/json
+      description: Get Users
+      operationId: create_user
+      parameters:
+      - description: CreateUserRequestBody
+        in: body
+        name: user
+        required: true
+        schema:
+          $ref: '#/definitions/models.User'
+      produces:
+      - application/json
+      responses:
+        "201":
+          description: GetUserBody
+          schema:
+            $ref: '#/definitions/models.User'
+        "400":
+          description: Invalid Argument
+          schema:
+            type: string
+        "500":
+          description: Server Error
+          schema:
+            type: string
+      summary: Get All Users
+      tags:
+      - User
+    patch:
+      consumes:
+      - application/json
+      description: Patch User
+      operationId: patch_user
+      parameters:
+      - description: PatchUserRequestBody
+        in: body
+        name: user
+        required: true
+        schema:
+          $ref: '#/definitions/models.User'
+      produces:
+      - application/json
+      responses:
+        "201":
+          description: GetUserBody
+          schema:
+            $ref: '#/definitions/models.User'
+        "400":
+          description: Invalid Argument
+          schema:
+            type: string
+        "500":
+          description: Server Error
+          schema:
+            type: string
+      summary: Patch User
+      tags:
+      - User
     post:
       consumes:
       - application/json
@@ -42,7 +102,72 @@ paths:
       summary: Create User
       tags:
       - User
+    put:
+      consumes:
+      - application/json
+      description: Update User
+      operationId: update_user
+      parameters:
+      - description: UpdateUserRequestBody
+        in: body
+        name: user
+        required: true
+        schema:
+          $ref: '#/definitions/models.User'
+      produces:
+      - application/json
+      responses:
+        "201":
+          description: GetUserBody
+          schema:
+            $ref: '#/definitions/models.User'
+        "400":
+          description: Invalid Argument
+          schema:
+            type: string
+        "500":
+          description: Server Error
+          schema:
+            type: string
+      summary: Update User
+      tags:
+      - User
   /user/{id}:
+    delete:
+      consumes:
+      - application/json
+      description: Delate User
+      operationId: delete_user
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: string
+      - description: DeleteUserRequestBody
+        in: body
+        name: user
+        required: true
+        schema:
+          $ref: '#/definitions/models.User'
+      produces:
+      - application/json
+      responses:
+        "201":
+          description: GetUserBody
+          schema:
+            $ref: '#/definitions/models.User'
+        "400":
+          description: Invalid Argument
+          schema:
+            type: string
+        "500":
+          description: Server Error
+          schema:
+            type: string
+      summary: Delate User
+      tags:
+      - User
     get:
       consumes:
       - application/json

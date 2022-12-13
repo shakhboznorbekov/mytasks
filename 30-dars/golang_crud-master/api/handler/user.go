@@ -80,6 +80,18 @@ func (h *HandlerV1) GetById(c *gin.Context) {
 	c.JSON(http.StatusOK, user)
 }
 
+// CreateUser godoc
+// @ID create_user
+// @Router /user [GET]
+// @Summary Get All Users
+// @Description Get Users
+// @Tags User
+// @Accept json
+// @Produce json
+// @Param user body models.User true "CreateUserRequestBody"
+// @Success 201 {object} models.User "GetUserBody"
+// @Response 400 {object} string "Invalid Argument"
+// @Failure 500 {object} string "Server Error"
 func (h *HandlerV1) GetList(c *gin.Context) {
 
 	users, err := storage.GetList(h.db)
@@ -92,6 +104,18 @@ func (h *HandlerV1) GetList(c *gin.Context) {
 	c.JSON(http.StatusOK, users)
 }
 
+// UpdateUser godoc
+// @ID update_user
+// @Router /user [PUT]
+// @Summary Update User
+// @Description Update User
+// @Tags User
+// @Accept json
+// @Produce json
+// @Param user body models.User true "UpdateUserRequestBody"
+// @Success 201 {object} models.User "GetUserBody"
+// @Response 400 {object} string "Invalid Argument"
+// @Failure 500 {object} string "Server Error"
 func (h *HandlerV1) Update(c *gin.Context) {
 
 	var (
@@ -130,6 +154,18 @@ func (h *HandlerV1) Update(c *gin.Context) {
 	c.JSON(http.StatusOK, resp)
 }
 
+// PatchUser godoc
+// @ID patch_user
+// @Router /user [PATCH]
+// @Summary Patch User
+// @Description Patch User
+// @Tags User
+// @Accept json
+// @Produce json
+// @Param user body models.User true "PatchUserRequestBody"
+// @Success 201 {object} models.User "GetUserBody"
+// @Response 400 {object} string "Invalid Argument"
+// @Failure 500 {object} string "Server Error"
 func (h *HandlerV1) Patch(c *gin.Context) {
 
 	var (
@@ -166,6 +202,19 @@ func (h *HandlerV1) Patch(c *gin.Context) {
 	c.JSON(http.StatusOK, resp)
 }
 
+// DelateUser godoc
+// @ID delete_user
+// @Router /user/{id} [DELETE]
+// @Summary Delate User
+// @Description Delate User
+// @Tags User
+// @Accept json
+// @Produce json
+// @Param id path string true "id"
+// @Param user body models.User true "DeleteUserRequestBody"
+// @Success 201 {object} models.User "GetUserBody"
+// @Response 400 {object} string "Invalid Argument"
+// @Failure 500 {object} string "Server Error"
 func (h *HandlerV1) Delete(c *gin.Context) {
 
 	id := c.Param("id")
