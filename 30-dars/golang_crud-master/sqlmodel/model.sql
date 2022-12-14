@@ -16,3 +16,5 @@ SET
     last_name = 'Olimov' 
 WHERE 
     id = '32d98624-3aa2-4550-954f-c91798794dd7';
+
+
